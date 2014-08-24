@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,9 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1>Легкое использование существующих электронных документов (инструкций)</h1>
+        <h1>Р›РµРіРєРѕРµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёС… СЌР»РµРєС‚СЂРѕРЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ (РёРЅСЃС‚СЂСѓРєС†РёР№)</h1>
         <div class="literature">
-            <p class="list-literature"><b>Список литературы:</b></p>
+            <p class="list-literature"><b>РЎРїРёСЃРѕРє Р»РёС‚РµСЂР°С‚СѓСЂС‹:</b></p>
             <div data-bind="foreach: $root.availableItems" class="references">
                 <input type="checkbox" data-bind="value: id() + '.' + ' ' + name(), checked: $root.newDocumentList" />
                 <span data-bind="text:id() + '.' + ' ' + name()"></span>
@@ -20,28 +20,28 @@
         <hr>
         <div class="send-message">
             <form name="message" method="post">
-                <p class="send-letter"><b>Отправка письма:</b></p>
+                <p class="send-letter"><b>РћС‚РїСЂР°РІРєР° РїРёСЃСЊРјР°:</b></p>
                 <p class="inscription">E-mail:<br />
                     <input type="email" size="40" name="email" data-bind="value: epost" class="cell">
                 </p>
-                <p class="inscription">Тема:<br />
+                <p class="inscription">РўРµРјР°:<br />
                     <input type="text" size="40" data-bind="value: Theme" class="cell">
                 </p>
-                <p class="inscription">Сообщение:<br />
+                <p class="inscription">РЎРѕРѕР±С‰РµРЅРёРµ:<br />
                     <textarea name="comment" cols="40" rows="4" data-bind="value: message"></textarea>
                 </p>
-                <p>Прикрепленные файлы:</p>
+                <p>РџСЂРёРєСЂРµРїР»РµРЅРЅС‹Рµ С„Р°Р№Р»С‹:</p>
                 <div data-bind="foreach: $root.newDocumentList">
                     <span data-bind="text: $data" class="list"></span>
                     <br />
                 </div>
-                <input type="submit" data-bind="click: sendMessage"  value="Отправить" class="button">
+                <input type="submit" data-bind="click: sendMessage"  value="РћС‚РїСЂР°РІРёС‚СЊ" class="button">
             </form>
             <div class="submit-message" data-bind="visible: sendInformation">
-                <p>"Отправленное сообщение"</p>
+                <p>"РћС‚РїСЂР°РІР»РµРЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ"</p>
                 <p class="title">Email</p><br/><span data-bind="text: epost"></span><br/>
-                <p class="title">Тема</p><br/><span data-bind="text: Theme"></span><br/>
-                <p class="title">Сообщение</p><br/><span data-bind="text: message"></span><br/>
+                <p class="title">РўРµРјР°</p><br/><span data-bind="text: Theme"></span><br/>
+                <p class="title">РЎРѕРѕР±С‰РµРЅРёРµ</p><br/><span data-bind="text: message"></span><br/>
                 <div data-bind="foreach: $root.newDocumentList">
                     <span data-bind="text: $data"></span>
                     <br/>

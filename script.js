@@ -1,4 +1,4 @@
-/**
+п»ї/**
  * Created by Tatka on 18.08.14.
  */
 function demoDocument(id, name){
@@ -20,12 +20,12 @@ function viewModel(){
     self.newDocumentList = ko.observableArray();
 	self.sendInformation= ko.observable(false);
     self.add = function(){
-        self.availableItems.push(new demoDocument(1, "О компании QAP INT."));
-        self.availableItems.push(new demoDocument(2, "Преимущества использования инструмента для Вашего бизнеса."));
-        self.availableItems.push(new demoDocument(3, "Перспективы сотрудничества с QAP INT."));
-        self.availableItems.push(new demoDocument(4, "Описание решения для разработки HTML-5 презентаций."));
-        self.availableItems.push(new demoDocument(5, "Описание разработанного инструмента CLM2CRM и его интеграция с salesforce.com(русский)."));
-        self.availableItems.push(new demoDocument(6, "Описание разработанного инструмента CLM2CRM и его интеграция с salesforce.com(english)."));
+        self.availableItems.push(new demoDocument(1, "Рћ РєРѕРјРїР°РЅРёРё QAP INT."));
+        self.availableItems.push(new demoDocument(2, "РџСЂРµРёРјСѓС‰РµСЃС‚РІР° РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚Р° РґР»СЏ Р’Р°С€РµРіРѕ Р±РёР·РЅРµСЃР°."));
+        self.availableItems.push(new demoDocument(3, "РџРµСЂСЃРїРµРєС‚РёРІС‹ СЃРѕС‚СЂСѓРґРЅРёС‡РµСЃС‚РІР° СЃ QAP INT."));
+        self.availableItems.push(new demoDocument(4, "РћРїРёСЃР°РЅРёРµ СЂРµС€РµРЅРёСЏ РґР»СЏ СЂР°Р·СЂР°Р±РѕС‚РєРё HTML-5 РїСЂРµР·РµРЅС‚Р°С†РёР№."));
+        self.availableItems.push(new demoDocument(5, "РћРїРёСЃР°РЅРёРµ СЂР°Р·СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ РёРЅСЃС‚СЂСѓРјРµРЅС‚Р° CLM2CRM Рё РµРіРѕ РёРЅС‚РµРіСЂР°С†РёСЏ СЃ salesforce.com(СЂСѓСЃСЃРєРёР№)."));
+        self.availableItems.push(new demoDocument(6, "РћРїРёСЃР°РЅРёРµ СЂР°Р·СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ РёРЅСЃС‚СЂСѓРјРµРЅС‚Р° CLM2CRM Рё РµРіРѕ РёРЅС‚РµРіСЂР°С†РёСЏ СЃ salesforce.com(english)."));
     };
     self.showDocument = function (item) {
         item.Selected(!(item.Selected()));
