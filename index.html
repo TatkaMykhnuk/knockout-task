@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>knockout-task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Легкое использование существующих электронных документов (инструкций)</h1>
+        <div class="literature">
+            <p class="list-literature"><b>Список литературы:</b></p>
+            <div data-bind="foreach: $root.availableItems" class="references">
+                <input type="checkbox" data-bind="value: id() + '.' + ' ' + name(), checked: $root.newDocumentList" />
+                <span data-bind="text:id() + '.' + ' ' + name()"></span>
+                <br />
+            </div>
+            <br />
+        </div>
+        <hr>
+        <div class="send-message">
+            <form name="message" method="post">
+                <p class="send-letter"><b>Отправка письма:</b></p>
+                <p class="inscription">E-mail:<br />
+                    <input type="email" size="40" name="email" data-bind="value: epost" class="cell">
+                </p>
+                <p class="inscription">Тема:<br />
+                    <input type="text" size="40" data-bind="value: Theme" class="cell">
+                </p>
+                <p class="inscription">Сообщение:<br />
+                    <textarea name="comment" cols="40" rows="4" data-bind="value: message"></textarea>
+                </p>
+                <p>Прикрепленные файлы:</p>
+                <div data-bind="foreach: $root.newDocumentList">
+                    <span data-bind="text: $data" class="list"></span>
+                    <br />
+                </div>
+                <input type="submit" data-bind="click: sendMessage"  value="Отправить" class="button">
+            </form>
+            <div class="submit-message" data-bind="visible: sendInformation">
+                <p>"Отправленное сообщение"</p>
+                <p class="title">Email</p><br/><span data-bind="text: epost"></span><br/>
+                <p class="title">Тема</p><br/><span data-bind="text: Theme"></span><br/>
+                <p class="title">Сообщение</p><br/><span data-bind="text: message"></span><br/>
+                <div data-bind="foreach: $root.newDocumentList">
+                    <span data-bind="text: $data"></span>
+                    <br/>
+                </div>
+            </div>
+    </div>
+    <script src="knockout-3.2.0.js"></script>
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>
