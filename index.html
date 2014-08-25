@@ -11,45 +11,47 @@
         <div class="literature">
             <p class="list-literature"><b>Список литературы:</b></p>
             <div data-bind="foreach: $root.availableItems" class="references">
-                <input type="checkbox" data-bind="value: id() + '.' + ' ' + name(), checked: $root.newDocumentList" />
-                <span data-bind="text:id() + '.' + ' ' + name()"></span>
+				<span data-bind="text:id() + '.' + ' ' + name()"></span>
+                <input type="checkbox" data-bind="value: id() + '.' + ' ' + name(), checked: $root.selectedItems" />
                 <br />
             </div>
-            <br />
         </div>
-        <hr>
         <div class="send-message">
             <form name="message" method="post">
                 <p class="send-letter"><b>Отправка письма:</b></p>
                 <p class="inscription">E-mail:<br />
-                    <input type="email" size="40" name="email" data-bind="value: epost" class="cell">
+                    <input type="email" name="email" 
+						data-bind="value: epost" 
+						class="cell">
                 </p>
                 <p class="inscription">Тема:<br />
-                    <input type="text" size="40" data-bind="value: Theme" class="cell">
+                    <input type="text" data-bind="value: theme" class="cell">
                 </p>
                 <p class="inscription">Сообщение:<br />
                     <textarea name="comment" cols="40" rows="4" data-bind="value: message"></textarea>
                 </p>
                 <p>Прикрепленные файлы:</p>
-                <div data-bind="foreach: $root.newDocumentList">
+                <div data-bind="foreach: $root.selectedItems">
                     <span data-bind="text: $data" class="list"></span>
                     <br />
                 </div>
-                <input type="submit" data-bind="click: sendMessage"  value="Отправить" class="button">
+                <input type="submit" data-bind="click: sendMessage" value="Отправить" class="button">
             </form>
-            <div class="submit-message" data-bind="visible: sendInformation">
+		</div>
+    </div>
+		
+	<div class="sent-message" data-bind="visible: isInformationSent">
                 <p>"Отправленное сообщение"</p>
-                <p class="title">Email</p><br/><span data-bind="text: epost"></span><br/>
-                <p class="title">Тема</p><br/><span data-bind="text: Theme"></span><br/>
-                <p class="title">Сообщение</p><br/><span data-bind="text: message"></span><br/>
-                <div data-bind="foreach: $root.newDocumentList">
+                <p class="title">Email: </p><span data-bind="text: epost"></span><br/>
+                <p class="title">Тема: </p><span data-bind="text: theme"></span><br/>
+                <p class="title">Сообщение:</p><span data-bind="text: message"></span><br/>
+				<p class="title">Выбранная литература: </p><br/>
+                <div data-bind="foreach: $root.selectedItems">
                     <span data-bind="text: $data"></span>
                     <br/>
                 </div>
-            </div>
     </div>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
-    <script src="script.js"></script>
-    </div>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+		<script src="script.js"></script>
 </body>
 </html>

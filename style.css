@@ -4,39 +4,53 @@
     background: whitesmoke;
 }
 .wrapper{
-    width: 100%;
-    height: 550px;
-    margin-top: 0;
-    margin-left: 200px;
+    width: 1024px;
+    margin:0 auto;
     padding: 0;
+	position:relative;
+	z-index:0;
+	height:1000px;
 }
+
+.sent-message{
+	visibility: false;
+	width:400px;
+	top:10%;
+	left:40%;
+    padding:20px;
+    position:absolute;
+    top:100px;
+    background: white;
+    border-radius: 20px;
+	z-index:1;
+}
+
 h1{
-    width: 55%;
-    margin-left: 50px;
+    width: 100%;
     font-size: 37px;
     color: #d14040;
     text-align: justify;
 }
 .literature{
-    width: 38%;
-    margin-bottom: 276px;
+    width: 50%;
     float: left;
 }
-hr{
-    width: 438px;
-    position: relative;
-    top: 237px;
-    right: 462px;
-    -webkit-transform: rotate(90deg);
+.literature span{
+width:80%;
 }
-.send-message{
-    margin-top:15px;
+
+input[type="checkbox"] {
+margin:0;
+float:right;
 
 }
-input[type="checkbox"] {
-    position: absolute;
-    left: 615px;
+.send-message{
+	float:left;
+	width:40%;
+	padding:0 0 0 100px;
+	border-left:1px solid gray;
 }
+
 .list{
     color: gray;
 }
