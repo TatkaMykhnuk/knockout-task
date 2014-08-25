@@ -5,26 +5,24 @@
 }
 .wrapper{
     width: 1024px;
-    margin:0 auto;
+    height: 1000px;
+    margin: 0 auto;
     padding: 0;
-	position:relative;
-	z-index:0;
-	height:1000px;
+    position: relative;
+    z-index: 0;    
 }
-
 .sent-message{
-	visibility: false;
-	width:400px;
-	top:10%;
-	left:40%;
-    padding:20px;
-    position:absolute;
-    top:100px;
+    visibility: false;
+    width: 400px;
+    padding: 20px;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    z-index: 1;    
+    top: 100px;
     background: white;
     border-radius: 20px;
-	z-index:1;
 }
-
 h1{
     width: 100%;
     font-size: 37px;
@@ -36,21 +34,18 @@ h1{
     float: left;
 }
 .literature span{
-width:80%;
+    width: 80%;
 }
-
 input[type="checkbox"] {
-margin:0;
-float:right;
-
+    margin: 0;
+    float: right;
 }
 .send-message{
-	float:left;
-	width:40%;
-	padding:0 0 0 100px;
-	border-left:1px solid gray;
+    width: 40%;
+    float: left;
+	padding: 0 0 0 100px;
+	border-left: 1px solid gray;
 }
-
 .list{
     color: gray;
 }

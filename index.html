@@ -20,9 +20,7 @@
             <form name="message" method="post">
                 <p class="send-letter"><b>Отправка письма:</b></p>
                 <p class="inscription">E-mail:<br />
-                    <input type="email" name="email" 
-						data-bind="value: epost" 
-						class="cell">
+                    <input type="email" name="email" data-bind="value: epost" class="cell">
                 </p>
                 <p class="inscription">Тема:<br />
                     <input type="text" data-bind="value: theme" class="cell">
@@ -39,7 +37,6 @@
             </form>
 		</div>
     </div>
-		
 	<div class="sent-message" data-bind="visible: isInformationSent">
                 <p>"Отправленное сообщение"</p>
                 <p class="title">Email: </p><span data-bind="text: epost"></span><br/>
